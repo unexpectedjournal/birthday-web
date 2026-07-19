@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Avina!</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<!-- <body style="background-image: url(/bg.png);" class="flex justify-center h-screen items-center"> -->
+<div class="h-screen w-screen p-5 bg-[url(/bg.png)] bg-contain bg-center flex justify-center items-center">
+
+    <div class="bg-white border px-6 py-3 border-4 border-gray-200 shadow-lg shadow-neutral-900 rounded-xl text-center animate__animated animate__backInDown m-8 w-100"
+        id="message">
+        <h1 class="text-4xl font-semibold font-stretch-ultra-condensed animate__animated animate__zoomIn">Happy 27!
+        </h1>
+        <h1
+            class="text-5xl text-orange-700 font-bold font-stretch-ultra-condensed animate__animated animate__pulse animate__infinite">
+            Avina Julistya Cahyamega Handini
+        </h1>
+        <h1 class="mt-5 p-2 text-xs">Ada lagunya kalo mau dengerin dulu, pake tws ya! (Cuma bisa didengerin di halaman
+            ini)</h1>
+        <div class="audio flex justify-center">
+            <audio controls>
+                <source src="ya ini jadi gimana ya gatau.mp3" type="audio/mpeg">
+                Browsermu tidak mendukung tag audio, beli macbook dulu sana!
+            </audio>
+        </div>
+        <button
+            class="p-2 bg-orange-700 text-white rounded mt-5 hover:bg-orange-950 cursor-pointer transition ease-in-out duration-200 w-full animate__animated animate__delay-1s animate__tada"
+            onclick="changeMessage()">1. Klik
+            disini untuk Membaca Pesan dari Mas Jawa itu!</button>
+        <button
+            class="p-2 bg-orange-700 text-white rounded mt-5 hover:bg-orange-950 cursor-pointer transition ease-in-out duration-200 w-full animate__animated animate__delay-1s animate__flipInY"
+            onclick="location.href='/blowCandle.html';">2. Klik
+            disini Buat Tiup Lilin!</button>
+    </div>
+</div>
+
+<script src=" https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.3.2/tsparticles.confetti.bundle.min.js">
+</script>
+<script>
+    const end = Date.now() + 15 * 1e3;
+    const colors = ["#bb0000", "#ffffff"];
+    (function frame() {
+        confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors
+        });
+        confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors
+        });
+        if (Date.now() < end) requestAnimationFrame(frame);
+    })();
+
+
+    let message = document.getElementById("message");
+    function changeMessage() {
+        message.innerHTML = `<h1 class="text-1xl font-semibold text-warp animate__animated">
+        Hai Apin, sekacau-kacaunya diriku ini, aku menyempatkan untuk bikin ginian.
+        Gabisa kasih apa-apa tahun ini, ini aja ya yang gratees tapi bikin sendiri kok ini, masih ada usahanya wkwk.
+        Bikinnya on going 19 Juli malem, trus tiba2 relapse lagi sempet chat kamu jam 12an apaya, kelar nih jam 04.28 udah 20 Juli.
+        Cobain tiup lilin virtual ya? Di tombol kedua tadi, semoga works sih itu, diikutin caranya.
+        Doanya udah tak ulang-ulang dari kemarin, intinya sehat, bahagia, dimudahkan rezekinya apapun itu.
+        Tetap jadi Apin yang kukenal baeeeek dari dulu. God Bless You!
+        </h1>
+        <h2>-your claytown boy 💛 </h2>
+        <button
+            class="p-2 bg-orange-700 text-white rounded mt-5 hover:bg-orange-950 cursor-pointer transition ease-in-out duration-200 w-full animate__animated animate__delay-1s animate__tada"
+            onclick="refresh()">Kembali</button>`
+    }
+
+    function refresh() {
+        alert("Apa yakin mau kembali mengulang masa lalu dengan versi terbaik?")
+        alert("Ga ding bohong, ntar di klik lagi aja langsung balik awal xixixi")
+        location.reload();
+    }
+
+
+</script>
+
+</body>
+
+</html>
